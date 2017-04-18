@@ -36,6 +36,6 @@ def int2byte(i):
 
 
 def byte2int(i):
-    if _PY2:
-        return ord(i)
-    return i
+    if isinstance(i, int):
+        return i
+    return ord(i)
